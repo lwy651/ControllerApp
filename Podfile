@@ -4,4 +4,5 @@ use_frameworks!
 target 'ControllerApp' do
   pod 'CocoaAsyncSocket'
   pod 'SnapKit'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 end

@@ -19,7 +19,7 @@ class TableCell: UITableViewCell {
     }
     func initUI() {
         self.backgroundColor = UIColor.clear
-        namelabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60 ))
+        namelabel = UILabel(frame: CGRect(x: 60, y: 0, width: 100, height: 60 ))
         namelabel?.text = "asd"
         namelabel?.textColor = UIColorFromRGB(hex: "#ffffff", alpha: 1.0)
         self.addSubview(namelabel!)

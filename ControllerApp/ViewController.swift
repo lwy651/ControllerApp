@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,AlertDelegate {
+    var socket = SocketInstance.getInstance()
+    var userdata = CoredataController.getInstance()
     let dataArr:Array = ["前厅","序厅","正厅","尾厅"]
     @IBOutlet weak var bgimage: UIImageView!
     var table:UITableView!
@@ -30,6 +32,15 @@ class ViewController: UIViewController {
         
         setTable()
     }
+    @IBAction func saveBtn(_ sender: Any) {
+        userdata.saveData()
+    }
+    @IBAction func queryBtn(_ sender: Any) {
+        userdata.queryData()
+        let alertController = AlertView()
+        self.view.addSubview(alertController)
+        alertController.delegate = self
+    }
 }
 extension ViewController{
     func setTable() {
@@ -44,6 +55,12 @@ extension ViewController{
         table.backgroundColor = UIColor.clear
         self.view.addSubview(table)
     }
+    
+    func delegateMethod() {
+        let sb = UIStoryboard(name:"Main",bundle:nil)
+        let loginView = sb.instantiateViewController(withIdentifier: "SettingController") as! SettingController
+        self.present(loginView, animated: true, completion: nil)
+    }
 }
 extension ViewController:UITableViewDataSource,UITableViewDelegate
 {
@@ -57,5 +74,11 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 }
