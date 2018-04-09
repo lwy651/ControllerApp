@@ -25,9 +25,9 @@ func UIColorFromRGB (hex:String,alpha:CGFloat) -> UIColor {
 }
 
 //渐变
-func getGradient(startcolor:String,endcolor:String,frame:CGRect)->CAGradientLayer {
-    let topColor = UIColorFromRGB(hex: startcolor, alpha: 1.0)
-    let buttomColor = UIColorFromRGB(hex: endcolor, alpha: 1.0)
+func getGradient(startcolor:String,endcolor:String,frame:CGRect,startpoint:CGPoint,endpoint:CGPoint,alpha:CGFloat)->CAGradientLayer {
+    let topColor = UIColorFromRGB(hex: startcolor, alpha: alpha)
+    let buttomColor = UIColorFromRGB(hex: endcolor, alpha: alpha)
     let gradientColors = [topColor.cgColor, buttomColor.cgColor]
     
     //定义每种颜色所在的位置
@@ -37,8 +37,8 @@ func getGradient(startcolor:String,endcolor:String,frame:CGRect)->CAGradientLaye
     let gradientLayer = CAGradientLayer()
     gradientLayer.colors = gradientColors
     gradientLayer.locations = gradientLocations
-    gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-    gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+    gradientLayer.startPoint = startpoint
+    gradientLayer.endPoint = endpoint
     
     
     //设置其CAGradientLayer对象的frame，并插入view的layer

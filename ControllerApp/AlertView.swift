@@ -59,7 +59,7 @@ class AlertView:UIView{
         submitbtn?.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         //submitbtn?.setImage(UIImage(named: "buttonbg"), for: UIControlState.normal)
         submitbtn?.setBackgroundImage(UIImage(named: "buttonbg"), for: UIControlState.normal)
-        submitbtn?.setTitleColor(UIColorFromRGB(hex: "#2AA5FF", alpha: 0.5), for: UIControlState.normal)
+        submitbtn?.setTitleColor(UIColorFromRGB(hex: "#2AA5FF", alpha: 0.8), for: UIControlState.normal)
         submitbtn?.addTarget(self, action: #selector(submitClick), for: UIControlEvents.touchUpInside)
         submitbtn?.adjustsImageWhenHighlighted = false
         
@@ -82,7 +82,6 @@ class AlertView:UIView{
     }
     
     @objc func btnClick() {
-        print("<#T##items: Any...##Any#>")
         self.removeFromSuperview()
     }
     

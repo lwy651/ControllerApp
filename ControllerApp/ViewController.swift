@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController,AlertDelegate {
     var socket = SocketInstance.getInstance()
     var userdata = CoredataController.getInstance()
-    let dataArr:Array = ["前厅","序厅","正厅","尾厅"]
+    let dataArr:Array = ["前厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","序厅","正厅","尾厅","正厅","尾厅","正厅","尾厅","正厅","尾厅","正厅","正厅","尾厅","正厅","尾厅","尾as"]
     @IBOutlet weak var bgimage: UIImageView!
     var table:UITableView!
     override func viewDidLoad() {
@@ -26,7 +26,10 @@ class ViewController: UIViewController,AlertDelegate {
     }
     func initUI() {
         self.view.backgroundColor = UIColorFromRGB(hex: "#3299FF", alpha: 1.0)
-        self.view.layer.insertSublayer(getGradient(startcolor: "#251C42", endcolor: "#1d1433", frame: self.view.frame), at: 0)
+        let startpoint = CGPoint(x: 0, y: 0)
+        let endpoint = CGPoint(x: 1, y: 1)
+        
+        self.view.layer.insertSublayer(getGradient(startcolor: "#251C42", endcolor: "#1d1433", frame: self.view.frame,startpoint: startpoint,endpoint: endpoint,alpha: 1.0), at: 0)
         bgimage.backgroundColor = UIColor(patternImage: UIImage(named: "line")!)
         bgimage.alpha = 0.05
         
@@ -44,16 +47,26 @@ class ViewController: UIViewController,AlertDelegate {
 }
 extension ViewController{
     func setTable() {
-        table = UITableView(frame: CGRect(x: 0, y: 0, width: 150, height: 1000))
-        table.rowHeight = 60
+        //table = UITableView(frame: CGRect(x: 0, y: 0, width: 150, height: 1000))
+        table = UITableView()
+        
+        table.rowHeight = 70
         table.bounces = false
-        table.showsHorizontalScrollIndicator = false
         table.separatorStyle = UITableViewCellSeparatorStyle.none
         table.delegate = self
         table.dataSource = self
+        table.showsVerticalScrollIndicator = false
+        table.showsHorizontalScrollIndicator = false
         table.register(TableCell.classForCoder(), forCellReuseIdentifier: "cell")
-        table.backgroundColor = UIColor.clear
+        //table.backgroundColor = UIColor.clear
         self.view.addSubview(table)
+        
+        table.snp.makeConstraints { (make) in
+            make.width.equalTo(150)
+            //make.height.equalTo(100)
+            make.top.equalTo(self.view.snp.top).offset(0)
+            make.bottom.equalTo(self.view.snp.bottom).offset(0)
+        }
     }
     
     func delegateMethod() {

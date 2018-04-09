@@ -8,6 +8,11 @@ DEPENDENCIES:
   - SnapKit
   - Spring (from `https://github.com/MengTo/Spring.git`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CocoaAsyncSocket
+    - SnapKit
+
 EXTERNAL SOURCES:
   Spring:
     :git: https://github.com/MengTo/Spring.git
@@ -24,4 +29,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 120bc4a3e8081523e80045bc8f94bfcece61a82d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
