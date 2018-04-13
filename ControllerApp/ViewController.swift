@@ -34,7 +34,10 @@ class ViewController: UIViewController,AlertDelegate {
         bgimage.alpha = 0.05
         
         setTable()
+        let aa = MenuCollection();
+        self.view.addSubview(aa)
     }
+    
     @IBAction func saveBtn(_ sender: Any) {
         userdata.saveData()
     }

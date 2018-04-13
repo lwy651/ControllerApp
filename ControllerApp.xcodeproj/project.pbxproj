@@ -18,6 +18,8 @@
 		86405198206BC03500E1EA3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86405196206BC03500E1EA3A /* LaunchScreen.storyboard */; };
 		864051A3206BC03500E1EA3A /* ControllerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864051A2206BC03500E1EA3A /* ControllerAppTests.swift */; };
 		864051AE206BC03500E1EA3A /* ControllerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864051AD206BC03500E1EA3A /* ControllerAppUITests.swift */; };
+		8642FEA320810A1D009A77CB /* MenuCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642FEA220810A1D009A77CB /* MenuCollection.swift */; };
+		8642FEA520810BA8009A77CB /* MyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642FEA420810BA8009A77CB /* MyCollectionCell.swift */; };
 		869DB373206BC8C8009183A8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869DB372206BC8C8009183A8 /* Utils.swift */; };
 		869DB376206BD957009183A8 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869DB375206BD957009183A8 /* TableCell.swift */; };
 		869DB378206E5EDE009183A8 /* SocketIntance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869DB377206E5EDE009183A8 /* SocketIntance.swift */; };
@@ -61,6 +63,8 @@
 		864051A9206BC03500E1EA3A /* ControllerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		864051AD206BC03500E1EA3A /* ControllerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAppUITests.swift; sourceTree = "<group>"; };
 		864051AF206BC03500E1EA3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8642FEA220810A1D009A77CB /* MenuCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollection.swift; sourceTree = "<group>"; };
+		8642FEA420810BA8009A77CB /* MyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionCell.swift; sourceTree = "<group>"; };
 		869DB372206BC8C8009183A8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		869DB375206BD957009183A8 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		869DB377206E5EDE009183A8 /* SocketIntance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIntance.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				86376581206FDBA00014D09C /* AlertView.swift */,
 				86D9C9562070FC7A003ADE30 /* ControllerButton.swift */,
 				86D9C95820711CB2003ADE30 /* SettingController.swift */,
+				8642FEA220810A1D009A77CB /* MenuCollection.swift */,
 			);
 			path = ControllerApp;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				869DB375206BD957009183A8 /* TableCell.swift */,
+				8642FEA420810BA8009A77CB /* MyCollectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -368,8 +374,10 @@
 				869DB373206BC8C8009183A8 /* Utils.swift in Sources */,
 				86376582206FDBA00014D09C /* AlertView.swift in Sources */,
 				869DB378206E5EDE009183A8 /* SocketIntance.swift in Sources */,
+				8642FEA320810A1D009A77CB /* MenuCollection.swift in Sources */,
 				86376580206FBBF70014D09C /* CoredataController.swift in Sources */,
 				86D9C9572070FC7A003ADE30 /* ControllerButton.swift in Sources */,
+				8642FEA520810BA8009A77CB /* MyCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
