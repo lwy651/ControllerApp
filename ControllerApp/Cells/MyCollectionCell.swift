@@ -10,9 +10,9 @@ import UIKit
 class MyCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let txt:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60 ))
+        let txt:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60 ))
         txt.text = "651"
-        txt.textColor = UIColorFromRGB(hex: "#235642", alpha: 1.0)
+        txt.textColor = UIColorFromRGB(hex: "#ffffff", alpha: 1.0)
         self.addSubview(txt)
     }
     

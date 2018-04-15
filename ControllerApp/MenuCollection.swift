@@ -17,14 +17,15 @@ class MenuCollection:UIView{
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 1.5
         layout.minimumInteritemSpacing = 1
-        layout.scrollDirection = UICollectionViewScrollDirection.vertical
+        layout.itemSize = CGSize(width: 200, height: 200)
+        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         let menuview:UICollectionView = UICollectionView(frame: CGRect(x: 200 , y: 100, width: 500, height: 500), collectionViewLayout: layout)
         menuview.register(MyCollectionCell.self, forCellWithReuseIdentifier: "cell")
+        menuview.showsHorizontalScrollIndicator = false
         self.addSubview(menuview)
         menuview.delegate = self
         menuview.dataSource = self
         //menuview.backgroundColor = UIColor.clear
-        print(651651)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,7 +42,6 @@ extension MenuCollection:UICollectionViewDataSource,UICollectionViewDelegate,UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:MyCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionCell
-        print(444444111222)
         return cell
     }
     private func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
